@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Backlog",
+        "items": [
+            {
+                "id": 1,
+                "title": "Company website redesign."
+            },
+            {
+                "id": 2,
+                "title": "Mobile app login process prototype."
+            }
+        ]
+    },
+    {
+        "name": "In Progress",
+        "items": [
+            {
+                "id": 3,
+                "title": "Research and strategy for upcoming project."
+            }
+        ]
+    },
+    {
+        "name": "In Review",
+        "items": [
+            {
+                "id": 4,
+                "title": "Dashboard layout redesign."
+            },
+            {
+                "id": 5,
+                "title": "Social media posts"
+            }
+        ]
+    },
+    {
+        "name": "Completed",
+        "items": [
+            {
+                "id": 6,
+                "title": "Review client spec document and give feedback."
+            },
+            {
+                "id": 7,
+                "title": "Navigation designs"
+            },
+            {
+                "id": 8,
+                "title": "Create style guide based on previous feedback"
+            }
+        ]
+    }
+]

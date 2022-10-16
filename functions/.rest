@@ -1,0 +1,23 @@
+
+
+POST http://localhost:8080/users/signup
+content-type: application/json
+
+{
+    "username": "sample1",
+    "password": "87654321pp",
+    "confirmpassword": "87654321"
+}
+
+
+
+###
+
+
+POST  http://localhost:8080/users/login
+content-type: application/json
+
+{
+    "username": "vikas",
+    "password": "vikas",
+}
