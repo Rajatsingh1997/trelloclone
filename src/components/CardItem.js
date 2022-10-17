@@ -9,7 +9,7 @@ function CardItem({ data, index }) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          className="bg-white rounded-md p-3 m-3 mt-0 last:mb-0"
+          className="bg-white text-black rounded-md p-3 m-3 mt-0 last:mb-0"
         >
           <h5 className="text-md my-3 text-lg leading-6">{data.title}</h5>
         </div>

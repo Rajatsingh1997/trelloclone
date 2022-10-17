@@ -2,7 +2,7 @@ const express = require('express');
 const  cors = require('cors');
 const app = express();
 require('dotenv').config();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 const User = require('./model/usersignup');
 app.use(cors({origin:true}));
@@ -10,7 +10,7 @@ app.use(express.urlencoded({urlencoded:true}))
 app.use(express.json());
 
 
-mongoose.connect('mongodb+srv://Ashish:Ashish@cluster0.vgss5.mongodb.net/Userstest?retryWrites=true&w=majority',{
+mongoose.connect(process.env.mongodburl,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(()=>{
@@ -43,13 +43,6 @@ app.post('/users/signup',async(req,res)=>{
                 message:"username already exist, try some unique one"
             })
         }
-        // const user = new User({
-        //     username:req.body.username,
-        //     password:req.body.password,
-        //     confirmpassword:req.body.confirmpassword
-        // })
-        // await user.save();
-        // res.json(user)
     } catch (error) {
         console.log(error);
         res.status(500).json({
