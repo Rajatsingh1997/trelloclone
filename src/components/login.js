@@ -20,7 +20,7 @@ const UserLogin = () => {
     };
     setError('');
     try {
-      const resp = await axios.post('http://localhost:8080/users/login', data);
+      const resp = await axios.post('https://dry-shore-16889.herokuapp.com/users/login', data);
       if (resp?.data) {
         if (resp?.data?._id) {
          localStorage.setItem("myId", resp?.data?._id)
@@ -47,7 +47,7 @@ const UserLogin = () => {
       };
       try {
         const res = await axios.post(
-          'http://localhost:8080/users/signup',
+          'https://dry-shore-16889.herokuapp.com/users/signup',
           data
         );
         if (res?.data) {
@@ -162,9 +162,9 @@ const UserLogin = () => {
                         </div>
                         <div className='flex items-center justify-between pb-6'>
                           {!toggle ? (
-                            <>
+                            <div>
                               <p className='mb-0 mr-2'>
-                                Don't have an account?
+                                Don&apos;t have an account?
                               </p>
                               <button
                                 type='button'
@@ -175,7 +175,7 @@ const UserLogin = () => {
                               >
                                 Sign up
                               </button>
-                            </>
+                            </div>
                           ) : (
                             <>
                               <p className='mb-0 mr-2'>Have account ?</p>
